@@ -1,0 +1,104 @@
+﻿<Window x:Class="WpfApp5_2.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5_2"
+        mc:Ignorable="d"
+        Title="結帳" Height="550" Width="700" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFABABAB"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="訂單列表" HorizontalAlignment="Center" FontFamily="UD Digi Kyokasho NP-B" FontSize="36" Background="{x:Null}">
+                <Label.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF848484" Offset="0.481"/>
+                    </LinearGradientBrush>
+                </Label.Foreground>
+            </Label>
+            <ListBox x:Name="listbox1" Width="300" Height="250">
+                <ListBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE2E2E2"/>
+                        <GradientStop Color="#FFF1F199" Offset="1"/>
+                    </LinearGradientBrush>
+                </ListBox.Background>
+            </ListBox>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0 10 0 0">
+                <Label Content="Total:" FontSize="28" FontFamily="UD Digi Kyokasho NK-B">
+                    <Label.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                            <GradientStop Color="#FF838383" Offset="0.497"/>
+                        </LinearGradientBrush>
+                    </Label.Foreground>
+                </Label>
+                <Label Content="0" x:Name="Total" HorizontalContentAlignment="Right" FontSize="28" Width="160" FontFamily="UD Digi Kyokasho NK-B">
+                    <Label.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                            <GradientStop Color="#FF7B7B7B" Offset="0.5"/>
+                        </LinearGradientBrush>
+                    </Label.Foreground>
+                </Label>
+                <Label Content="元" FontSize="28" FontFamily="UD Digi Kyokasho NK-B">
+                    <Label.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                            <GradientStop Color="#FF7A7A7A" Offset="0.495"/>
+                        </LinearGradientBrush>
+                    </Label.Foreground>
+                </Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10 0 0">
+                <Button x:Name="back" Content="返回主頁/繼續訂票" FontSize="20" Width="200" Height="50" Click="button_Click" FontFamily="UD Digi Kyokasho NP-B">
+                    <Button.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                            <GradientStop Color="Gray" Offset="0.5"/>
+                        </LinearGradientBrush>
+                    </Button.Foreground>
+                </Button>
+                <Button x:Name="fix" Content="詳細/修改" FontSize="20" Width="120" Height="50" Margin="30 0 0 0" Click="button_Click" FontFamily="UD Digi Kyokasho NP-B">
+                    <Button.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                            <GradientStop Color="#FF818181" Offset="0.5"/>
+                        </LinearGradientBrush>
+                    </Button.Foreground>
+                </Button>
+                <Button x:Name="delete" Content="刪除" FontSize="20" Width="100" Height="50" Margin="30 0 0 0" Click="button_Click" FontFamily="UD Digi Kyokasho NP-B">
+                    <Button.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                            <GradientStop Color="#FF818181" Offset="0.5"/>
+                        </LinearGradientBrush>
+                    </Button.Foreground>
+                </Button>
+                <Button x:Name="submit" Content="結帳" FontSize="20" Width="100" Height="50" Margin="30 0 0 0" Click="button_Click" FontFamily="UD Digi Kyokasho NP-B">
+                    <Button.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                            <GradientStop Color="Gray" Offset="0.5"/>
+                        </LinearGradientBrush>
+                    </Button.Foreground>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"></Frame>
+    </Grid>
+</Window>
